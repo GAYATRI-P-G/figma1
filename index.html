@@ -47,9 +47,23 @@
                 <li><img src="image/jondoe.svg" alt="image2"></li>
             </ul>
         </div>
+        <div class="hamburger-menu">
+            <ul>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Offers">Offers</a></li>
+                <li><a href="#Corporate">Corporate</a></li>
+                <li><a href="#Personal">Personal</a></li>
+                <li><a href="#Location">Location</a></li>
+                <li><a href="#Contact">Contact Us</a></li>
+                <li><a href="#notification"><img src="icons/bell.svg"/></a></li>
+                <li><a href="#profile"><button class="profile-btn"><img src="icons/j.svg" class="profile">John Doe</button></a></li>
+            </ul>
+        </div>
+        <marquee behavior="scroll" direction="right">
         <section class="smalltext">
             <p> Sunday Pick Up/Drop-Off only at Dubai Silicon Oasis & Habtoor Grand Sales Counters | All Rates inclusive of VAT. T&C’s apply | Follow us on Social Media for New Offers</p>
         </section>
+        </marquee>
         </div>
     </div>
     
@@ -271,7 +285,7 @@
 <!-- 
 fifth section -->
 <div class="freq">
-    Frequently asked questions</div>
+    <b>Frequently asked questions</b></div>
 
 <div class="container">
     <div class="faq-item">
@@ -453,6 +467,33 @@ document.addEventListener('DOMContentLoaded', () => {
   showSlide(currentSlide);
   setInterval(nextSlide, 3000); // Change slide every 3 seconds
 });
+
+
+function toggleMenu() {
+    const menu = document.querySelector('.hamburger-menu');
+    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+
+}
+
+
+
+// const hamburgerMenu = document.querySelector('.burger');
+// const navLinks = document.querySelector('.nav-links');
+
+// hamburgerMenu.addEventListener('click', () => {
+//   navLinks.classList.toggle('active');
+// });
+
+
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const navLinks = document.querySelector('.hamburger-menu ul');
+
+hamburgerMenu.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  hamburgerMenu.classList.toggle('active');
+});
+
+
 
 </script>
 
